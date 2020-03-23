@@ -1,6 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    //Android Studio 3.6 绑定视图所需要
+    viewBinding {
+        enabled = true
+    }
+
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
@@ -12,6 +18,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -19,6 +26,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    //jdk 1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }
@@ -40,4 +53,5 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.zzhoujay.richtext:richtext:2.4.7'
+    implementation 'org.greenrobot:eventbus:3.1.1'
 }

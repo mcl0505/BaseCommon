@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Theme">
+        <attr name="customImageViewStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- 自定义圆角ImageView -->
+    <declare-styleable name="CustomImageView">
+        <attr name="circle" format="boolean" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TitlebarView">
+        <!--    左边文字    -->
+        <attr name="leftText" format="string"/>
+        <!--    左边文字颜色    -->
+        <attr name="leftTextColor" format="color"/>
+        <!--    中间文字 颜色   -->
+        <attr name="centerTextColor" format="color"/>
+        <!--    中间文字    -->
+        <attr name="centerTitle" format="string"/>
+        <!--    右边文字颜色    -->
+        <attr name="rightTextColor" format="color"/>
+        <!--    右边文字    -->
+        <attr name="rightText" format="string"/>
+        <!--    左边图片    -->
+        <attr name="leftDrawble" format="reference"/>
+        <!--    右边图片    -->
+        <attr name="rightDrawable" format="reference"/>
+    </declare-styleable>
+
+</resources>
